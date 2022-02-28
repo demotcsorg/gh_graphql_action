@@ -1,6 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 const GITHUB_TOKEN = core.getInput('GITHUB_TOKEN');
 const USERNAME = core.getInput('USERNAME');
