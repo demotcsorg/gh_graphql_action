@@ -50,7 +50,7 @@ const headers = {
   "Content-Type": "application/json",
   Authorization: "bearer " + GITHUB_TOKEN
 };
-
+console.log('before call');
 fetch(baseUrl, {
     method: "POST",
     headers: headers,
@@ -87,3 +87,4 @@ fetch(baseUrl, {
 }catch(error){
     core.setFailed(error.message);
 }
+console.log('after call');
