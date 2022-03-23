@@ -15,6 +15,6 @@ OPERATION CAN ONLY BE query_pr or query_issue
 
 uses: demotcsorg/gh_graphql_action@v1.8
 with:
-    GITHUB_TOKEN: ${{ secrets.GRAPHTOKEN }}
-    USERNAME: saurabhrai19
-    OPERATION: query_pr
+  GITHUB_TOKEN: ${{ secrets.GRAPHTOKEN }}
+  USERNAME: saurabhrai19
+  OPERATION: query_pr
