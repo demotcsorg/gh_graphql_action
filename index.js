@@ -183,6 +183,12 @@ else if(OPERATION == "query_pr"){
   .then((txt)=>{
     const data = JSON.parse(txt);
     console.log(data);
+    var cropped = { data: [] };
+      cropped["data"] = data["data"]["organization"]["membersWithRole"]["edges"];
+
+      for(var i =0; i<cropped["data"].length; i++){
+      console.log(JSON.stringify(cropped["data"][i]["node"]));
+      }
   })
 }
 else{
