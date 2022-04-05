@@ -185,7 +185,7 @@ else if(OPERATION == "query_pr"){
     console.log(data);
     var cropped = { data: [] };
       cropped["data"] = data["data"]["organization"]["membersWithRole"]["edges"];
-
+    console.log("Printing Org members public details");
       for(var i =0; i<cropped["data"].length; i++){
       console.log(JSON.stringify(cropped["data"][i]["node"]));
       }
