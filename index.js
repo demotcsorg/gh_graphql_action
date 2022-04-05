@@ -54,6 +54,8 @@ const orgmembers={
         node{
           login
           name
+          email
+          company
         }
         role
       }
