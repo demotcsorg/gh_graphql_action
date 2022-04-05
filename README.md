@@ -13,7 +13,7 @@ OPERATION CAN ONLY BE query_pr or query_issue
 
 ## Example usage
 
-uses: demotcsorg/gh_graphql_action@v1.8
+uses: demotcsorg/gh_graphql_action@v1.11
 with:
   GITHUB_TOKEN: ${{ secrets.GRAPHTOKEN }}
   USERNAME: saurabhrai19

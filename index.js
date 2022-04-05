@@ -44,6 +44,24 @@ const query_issue = {
     }
 }`,
 };
+const orgmembers={
+  query: `
+  query orgmembers{
+    organization(login: "${USERNAME}"){
+      membersWithRole(first: 10){
+        edges{
+        cursor
+        node{
+          login
+          name
+        }
+        role
+      }
+      }
+    }
+  }
+  `
+}
 const query_pr = {
   query: `
 	query {
@@ -156,6 +174,16 @@ else if(OPERATION == "query_pr"){
       console.log(JSON.stringify(cropped))
     })
     .catch((error) => console.log(JSON.stringify(error)));
+}else if(OPERATION == "orgmembers"){
+  fetch(baseUrl, {
+    method: "POST",
+    headers: headers,
+    body: JSON.stringify(orgmembers),
+  }).then((response) => response.text())
+  .then((txt)=>{
+    const data = JSON.parse(txt);
+    console.log(data);
+  })
 }
 else{
   console.log('Not a valid Operation')
